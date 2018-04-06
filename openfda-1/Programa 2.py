@@ -13,8 +13,7 @@ conn.close()
 
 fichero = json.loads(fichero_raw) #interpreto el idioma json para que se me queden como listas y diccioanrios
 
-#hacemos un bucle para recorrer todas las posiciones de la lista results
-for element in range (len (fichero['results'])):
-    info_medicamento=fichero['results'][element] #guardo cada posicion de la lista en la variable
+for element in range (len (fichero['results'])):#recorro la lista de results del fichero json
+    info_medicamento=fichero['results'][element]
 
-    print ('ID: ',info_medicamento['id']) #imprimo la id para cada posición de la lista
+    print ('ID: ',info_medicamento['id'])
