@@ -23,8 +23,8 @@ def medicamentos():
 
     fichero = json.loads(fichero_raw)
 
-    for i in range(len(fichero['results'])): #recorro la lista de results del fichero json
-        info_medicamento = fichero['results'][i]
+    for element in range(len(fichero['results'])): #recorro la lista de results del fichero json
+        info_medicamento = fichero['results'][element]
         if (info_medicamento['openfda']):#vemos si existe el diccionario openfda con contenido
             print('Fabricante: ', info_medicamento['openfda']['substance_name'][0])
             lista.append(info_medicamento['openfda']['substance_name'][0])
