@@ -7,7 +7,7 @@ headers = {'User-Agent': 'http-client'}
 while True:
 
     conn = http.client.HTTPSConnection("api.fda.gov")
-    conn.request("GET", '/drug/label.json?limit=100&skip=' + '&search=active_ingredient:"acetylsalicylic"', None, headers)
+    conn.request("GET", '/drug/label.json?limit=100&search=active_ingredient:"acetylsalicylic"', None, headers)
     #ponemos de limit 100 porque es el máximo que podemos poner
     r1 = conn.getresponse()  # respuesta del servidor
     print(r1.status, r1.reason)
